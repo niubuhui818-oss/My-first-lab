@@ -1,4 +1,7 @@
 const add = require('./math');
-test('1+2=3', () => {
-  if (add(1, 2) !== 3) throw new Error("计算错误！");
+
+describe('Math operations', () => {
+  test('1 + 2 should equal 3', () => {
+    expect(add(1, 2)).toBe(3);
+  });
 });
