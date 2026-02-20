@@ -1,9 +1,0 @@
-name: 自动测试流水线
-on: [push]
-jobs:
-  test-job:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: 运行测试
-        run: node math.test.js
