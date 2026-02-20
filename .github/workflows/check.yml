@@ -1,0 +1,11 @@
+name: 自动体检流水线
+
+on: [push] # 只要有代码推上来，就执行
+
+jobs:
+  check_math:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4 # 1. 拿到代码
+      - name: 运行数学测试
+        run: node math.test.js     # 2. 用 Node 环境跑一下刚才的测试文件
